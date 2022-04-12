@@ -1,0 +1,45 @@
+{
+    "name": "nsmle/ouo-bypass",
+    "description": "A PHP library to bypass ouo.io/press short links",
+    "type": "library",
+    "keywords": [
+        "shortlink",
+        "ouo.io",
+        "ouo.press",
+        "php",
+        "ouo-bypass",
+        "shorlink-bypass"
+    ],
+    "homepage": "https://github.com/nsmle/ouo-bypass",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Nsmle\\OuoBypass\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nsmle\\OuoBypass\\Test\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "nsmle",
+            "email": "fikiproductionofficial@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.0|^7.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "dev-master",
+        "phpunit/phpunit": "10.0.x-dev",
+        "friendsofphp/php-cs-fixer": "dev-master"
+    },
+    "scripts": {
+        "fix": "php ./vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix src/ --allow-risky=yes --config=php-cs-fixer.php",
+        "check": "php ./vendor/bin/phpcs src/ --standard=PSR12",
+        "test": "php ./vendor/bin/phpunit --no-coverage",
+        "coverage": "php ./vendor/bin/phpunit"
+    }
+}
